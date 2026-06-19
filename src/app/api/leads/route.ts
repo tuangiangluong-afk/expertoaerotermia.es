@@ -24,7 +24,7 @@ export async function POST(request: Request) {
         }
 
         let leadScore = body.leadScore || 60;
-        const currentCountry = 'ES';
+        const currentCountry = 'ES' as string;
         const currentNiche = 'aerotermia';
         
         // ----------------------------------------------------
