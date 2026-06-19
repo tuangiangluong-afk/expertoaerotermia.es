@@ -251,7 +251,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
                          {/* CTA */}
                          <div className="bg-gradient-to-br from-sky-950 to-sky-900 text-white rounded-2xl p-8 text-center shadow-lg">
-                            <h4 className="text-xl font-bold mb-2">Devis Gratuit</h4>
+                            <h4 className="text-xl font-bold mb-2">Presupuesto Gratuito</h4>
                             <p className="text-sky-100 text-sm mb-6">Comparez les prix des installateurs RGE près de chez vous.</p>
                             <Link href="/devis" className="inline-block bg-white text-sky-900 px-6 py-3 rounded-full font-bold hover:bg-sky-50 transition-colors w-full">
                                 Commencer

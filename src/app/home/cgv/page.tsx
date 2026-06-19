@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Conditions Générales de Vente - Expert Pompe à Chaleur",
-    description: "Consultez les CGV du réseau Expert Pompe à Chaleur : mise en relation avec des installateurs certifiés RGE QualiPAC, devis gratuits.",
+    description: "Consultez les CGV du réseau Expert Pompe à Chaleur : mise en relation avec des installateurs certifiés RGE QualiPAC, presupuesto gratuitos.",
 };
 
 export default function CGV() {

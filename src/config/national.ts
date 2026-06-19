@@ -2,26 +2,26 @@ import { CityConfig } from "@/lib/db";
 
 export const NATIONAL_CONFIG: CityConfig = {
     slug: "home",
-    domain: "expertpompeachaleur.com",
-    name: "Expert Pompe à Chaleur",
-    city: "France",
-    phoneNumber: "01 84 80 00 00",
-    email: "contact@expertpompeachaleur.com",
+    domain: "expertoaerotermia.es",
+    name: "Experto Aerotermia",
+    city: "España",
+    phoneNumber: "+34 900 000 000",
+    email: "contacto@expertoaerotermia.es",
     heroImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2940&auto=format&fit=crop",
-    description: "Le réseau n°1 d'installateurs de pompes à chaleur en France. Devis gratuit, étude de rentabilité et artisans certifiés RGE.",
+    description: "La red n°1 de instaladores de aerotermia en España. Presupuesto gratuito, estudio de rentabilidad y técnicos certificados.",
     meta: {
-        title: "Expert Pompe à Chaleur | Chauffage Écologique & Économies d'Énergie",
-        description: "Installation de pompes à chaleur pour particuliers partout en France. Devis gratuit sous 24h. Simulateur d'éligibilité aux aides RGE QualiPAC."
+        title: "Experto Aerotermia | Calefacción Eficiente y Ahorro Energético",
+        description: "Instalación de aerotermia para particulares en toda España. Presupuesto gratuito en 24h. Simulador de ayudas y subvenciones."
     },
     features: [
-        "Rendement Garanti",
-        "Devis Gratuit sous 24h",
-        "Éligible MaPrimeRénov'",
-        "Artisans RGE QualiPAC"
+        "Rendimiento Garantizado",
+        "Presupuesto Gratuito en 24h",
+        "Subvenciones Disponibles",
+        "Técnicos Certificados"
     ],
     pricing: {
-        base: "Sur Devis",
-        description: "Devis gratuit personnalisé selon votre chauffage actuel"
+        base: "Presupuesto Gratuito",
+        description: "Presupuesto personalizado según su sistema de calefacción actual"
     },
     hospitals: [],
     stations: [],
