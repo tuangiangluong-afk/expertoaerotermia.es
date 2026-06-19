@@ -139,7 +139,7 @@ export default function LeadForm({ city, domain, initialProjectType }: LeadFormP
     return (
         <div className="bg-white rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden font-sans">
             <div className="bg-gradient-to-r from-blue-600 to-sky-500 p-6 text-white">
-                <h3 className="font-bold text-lg">Simulador de Aerotermia 2026</h3>
+                <h3 className="font-bold text-lg">{`Simulador de Aerotermia en ${city} 2026`}</h3>
                 <div className="h-2 bg-white/20 rounded-full mt-4">
                     <div className="h-full bg-white rounded-full" style={{ width: `${progress}%` }} />
                 </div>

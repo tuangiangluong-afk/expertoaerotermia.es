@@ -38,7 +38,7 @@ export function getTargetAsCityConfig(slug: string): CityConfig | undefined {
     if (!target) return undefined;
 
     const priceDisplay = target.price_start + " €";
-    const priceDesc = "Estudio Gratuito";
+    const priceDesc = "Estudio y Cotización gratis";
 
     return {
         slug: target.slug,
@@ -52,11 +52,11 @@ export function getTargetAsCityConfig(slug: string): CityConfig | undefined {
         description: `${target.heroTitle} en ${target.name} (${target.zip}).`,
         geo: target.geo,
         features: [
-            "Ayudas NextGen",
-            "Certificación RITE",
-            "Instaladores Oficiales",
-            "Calefacción y Aire Acondicionado",
-            "Ahorro de hasta el 70%"
+            "Estudio Gratis",
+            "Rendimiento Garantizado",
+            "Certificación Oficial",
+            "Garantía Total",
+            "Presupuesto en 24h"
         ],
         stations: [],
         hospitals: [],

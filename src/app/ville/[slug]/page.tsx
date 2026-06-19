@@ -139,7 +139,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl">
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-4">Presupuesto y diseño gratuito</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-4">Presupuesto de aerotermia en {site.city}</h2>
                             <p className="text-slate-600">Cálculo de ahorro y coste de instalación inmediato</p>
                         </div>
                         <LeadForm
