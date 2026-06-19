@@ -12,93 +12,72 @@ export interface PseoPageContent {
     expert_tip: string;
 }
 
-const REGIONAL_DATA: Record<string, { subsidyName: string; subsidyAmount: string; avgPrice: string; }> = {
-    "28": { subsidyName: "Fondos Next Generation Madrid", subsidyAmount: "Hasta 3.000€ en Madrid", avgPrice: "8.000€ – 15.000€" },
-    "08": { subsidyName: "Fondos Next Generation Cataluña", subsidyAmount: "Hasta 3.000€ en Barcelona", avgPrice: "8.500€ – 16.000€" },
-};
-
 const DEFAULT_REGIONAL = {
-    subsidyName: "Fondos Next Generation EU",
-    subsidyAmount: "Subvenciones europeas hasta 3.000€",
-    avgPrice: "8.000€ – 15.000€"
+    subsidyName: "Subvenciones y Ayudas",
+    subsidyAmount: "Hasta 3.000€ de Subvención Autonómica",
+    avgPrice: "7.000€ – 15.000€"
 };
 
-type SpintaxType = "meta_title" | "meta_description" | "hero_title" | "hero_subtitle" | "cta_primary";
-type SpintaxContext = "HUB" | "LOCAL";
+function getExpertTip(city: string, postalCode: string): string {
+    const hash = city.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+    const tips = [
+        `Para una instalación de aerotermia en ${city}, recomendamos aprovechar si ya dispone de suelo radiante o radiadores de baja temperatura para maximizar la eficiencia (COP).`,
+        `En ${city}, combinar su sistema de aerotermia con paneles solares le permite climatizar su hogar de forma casi 100% gratuita durante gran parte del año.`,
+        `Asegúrese de solicitar las subvenciones europeas Next Generation disponibles en ${city} para la instalación de bombas de calor aire-agua antes de que se agoten los fondos.`
+    ];
+    return tips[hash % tips.length];
+}
 
-const templates: Record<SpintaxType, Record<SpintaxContext, string[]>> = {
-    meta_title: {
-        HUB: [
-            "Los Mejores Instaladores de Aerotermia en {city} | Presupuestos",
-            "Precio Instalación Aerotermia {city} | Ayudas Next Generation",
-            "Comparador de Instaladores de Aerotermia en la provincia de {dept}"
-        ],
-        LOCAL: [
-            "Instalador de Aerotermia en {city} | Presupuesto en 24h",
-            "Expertos en Aerotermia en {city} | Ahorra hasta 70% en calefacción",
-            "Instalación de Aerotermia y Suelo Radiante en {city}"
-        ]
-    },
-    meta_description: {
-        HUB: [
-            "Compara hasta 3 presupuestos de aerotermia en {city}. Encuentra empresas certificadas (RITE) y gestiona tus subvenciones europeas fácilmente.",
-            "Directorio de expertos en aerotermia en {city}. Olvídate del gas y reduce tu factura de luz. Pide tu estudio gratuito hoy mismo."
-        ],
-        LOCAL: [
-            "Empresa instaladora de aerotermia en {city}. Soluciones de climatización eficientes (frío/calor). Gestionamos las ayudas Next Generation por ti.",
-            "Ahorra en tu factura instalando aerotermia en tu chalet en {city}. Servicio rápido, equipos premium y máxima eficiencia energética."
-        ]
-    },
-    hero_title: {
-        HUB: [
-            "Compara los <span class=\"text-sky-500\">Mejores Instaladores de Aerotermia</span> en {city}",
-            "Aerotermia en <span class=\"text-sky-500\">{city}</span>: Compara Precios y Subvenciones",
-            "Encuentra tu <span class=\"text-sky-500\">Experto en Aerotermia</span> en {city}"
-        ],
-        LOCAL: [
-            "Tu Instalador de <span class=\"text-sky-500\">Aerotermia</span> en {city}",
-            "Despídete del Gas con Aerotermia en <span class=\"text-sky-500\">{city}</span>",
-            "Los Expertos en <span class=\"text-sky-500\">Climatización</span> en {city}"
-        ]
-    },
-    hero_subtitle: {
-        HUB: [
-            "Recibe 3 presupuestos gratuitos de empresas homologadas. Averigua cuánto puedes ahorrar y si aplicas a los Fondos Next Generation.",
-            "La forma más inteligente de instalar aerotermia. Te conectamos con los especialistas más valorados de tu zona."
-        ],
-        LOCAL: [
-            "Suelo radiante, agua caliente y aire acondicionado en un solo equipo. Instalación rápida y gestión integral de ayudas en toda la provincia.",
-            "Revaloriza tu vivienda y corta tus facturas energéticas de raíz. Estudio térmico gratuito para tu hogar en {city}."
-        ]
-    },
-    cta_primary: {
-        HUB: ["Comparar Presupuestos"],
-        LOCAL: ["Solicitar Estudio Gratuito"]
-    }
-};
-
-export async function getPseoContent(cityConfig: CityConfig, isHub: boolean = false): Promise<PseoPageContent> {
-    const context: SpintaxContext = isHub ? "HUB" : "LOCAL";
-    const cityHash = cityConfig.city.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const pick = (arr: string[]) => arr[cityHash % arr.length];
+function getIntroHtml(city: string, postalCode: string, avgPrice: string): string {
+    const hash = city.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
     
-    const replaceVars = (text: string) => {
-        return text
-            .replace(/{city}/g, cityConfig.city)
-            .replace(/{dept}/g, cityConfig.department || "");
+    // Evaluate closures replacing ${city} etc.
+    const intros = [
+        `<p class="mb-4">¿Desea instalar un sistema de <strong>aerotermia</strong> en <strong>${city}</strong> para reducir sus facturas de calefacción y gas? Nuestros técnicos especialistas diseñan y realizan la instalación de su bomba de calor de alta eficiencia.</p><p>Una instalación estándar de aerotermia en ${city} cuesta generalmente entre <strong>${avgPrice}</strong> antes de deducciones. Sustituir su vieja caldera por aerotermia le permite ahorrar hasta un <strong>75%</strong> en su factura energética anual.</p>`,
+        `<p class="mb-4">Climatice su vivienda de forma eficiente en <strong>${city}</strong> y protéjase contra la subida de los precios del gas y el gasóleo. Nuestros expertos en aerotermia realizan un estudio térmico gratuito a medida.</p><p>Presupuesto estimado: <strong>${avgPrice}</strong> llave en mano. Le ayudamos a gestionar su expediente de subvenciones para maximizar sus ayudas locales y autonómicas.</p>`
+    ];
+
+    return intros[hash % intros.length];
+}
+
+export async function getPseoContent(cityConfig: CityConfig, targetType: string = 'MIXED'): Promise<PseoPageContent> {
+    const { city, postalCode, pricing } = cityConfig;
+    const postal = postalCode || "";
+    
+    const regionalInfo = DEFAULT_REGIONAL;
+    const realPrice = pricing?.base || regionalInfo.avgPrice;
+
+    // Use a small local function to render the strings that require dynamic interpolation 
+    // at runtime (since the strings above use ${city} which we need to evaluate at runtime)
+    
+    const renderTip = (c: string) => {
+      const hash = c.split('').reduce((a, x) => a + x.charCodeAt(0), 0);
+      const tips = [
+        `Para una instalación de aerotermia en ${c}, recomendamos aprovechar si ya dispone de suelo radiante o radiadores de baja temperatura para maximizar la eficiencia (COP).`,
+        `En ${c}, combinar su sistema de aerotermia con paneles solares le permite climatizar su hogar de forma casi 100% gratuita durante gran parte del año.`,
+        `Asegúrese de solicitar las subvenciones europeas Next Generation disponibles en ${c} para la instalación de bombas de calor aire-agua antes de que se agoten los fondos.`
+      ];
+      return tips[hash % tips.length];
     };
 
-    const regional = REGIONAL_DATA[cityConfig.department || ""] || DEFAULT_REGIONAL;
+    const renderIntro = (c: string, p: string, avg: string) => {
+      const hash = c.split('').reduce((a, x) => a + x.charCodeAt(0), 0);
+      const intros = [
+        `<p class="mb-4">¿Desea instalar un sistema de <strong>aerotermia</strong> en <strong>${c}</strong> para reducir sus facturas de calefacción y gas? Nuestros técnicos especialistas diseñan y realizan la instalación de su bomba de calor de alta eficiencia.</p><p>Una instalación estándar de aerotermia en ${c} cuesta generalmente entre <strong>${avg}</strong> antes de deducciones. Sustituir su vieja caldera por aerotermia le permite ahorrar hasta un <strong>75%</strong> en su factura energética anual.</p>`,
+        `<p class="mb-4">Climatice su vivienda de forma eficiente en <strong>${c}</strong> y protéjase contra la subida de los precios del gas y el gasóleo. Nuestros expertos en aerotermia realizan un estudio térmico gratuito a medida.</p><p>Presupuesto estimado: <strong>${avg}</strong> llave en mano. Le ayudamos a gestionar su expediente de subvenciones para maximizar sus ayudas locales y autonómicas.</p>`
+      ];
+      return intros[hash % intros.length];
+    };
 
     return {
-        meta_title: replaceVars(pick(templates.meta_title[context])),
-        meta_description: replaceVars(pick(templates.meta_description[context])),
-        hero_title: replaceVars(pick(templates.hero_title[context])),
-        hero_badge: isHub ? "100% Gratis | Sin compromiso" : `Instalador certificado en ${cityConfig.city}`,
-        intro_html: replaceVars(pick(templates.hero_subtitle[context])),
-        cta_primary: pick(templates.cta_primary[context]),
-        pricing_estimated: regional.avgPrice,
-        regional_subsidy: regional.subsidyAmount,
-        expert_tip: `Gestión de Subvenciones Next Generation en la provincia de ${cityConfig.department || ""}.`
+        meta_title: `Instalador Aerotermia en ${city}${postal ? ` (${postal})` : ""} | Presupuesto y Precio`,
+        meta_description: `Instalación de aerotermia en ${city} por especialistas certificados. Ahorre hasta un 75% en calefacción y aire acondicionado. Presupuesto en 24h.`,
+        hero_title: `Instalador de <span class="text-blue-500">Aerotermia</span> en ${city}${postal ? ` <span class="text-slate-400 text-3xl">(${postal})</span>` : ""}`,
+        hero_badge: regionalInfo.subsidyName,
+        intro_html: renderIntro(city, postal, realPrice),
+        cta_primary: "Calcular presupuesto de aerotermia",
+        pricing_estimated: realPrice,
+        regional_subsidy: regionalInfo.subsidyAmount,
+        expert_tip: renderTip(city),
     };
 }
