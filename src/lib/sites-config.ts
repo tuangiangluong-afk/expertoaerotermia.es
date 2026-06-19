@@ -81,125 +81,185 @@ const _hubConfig: SiteConfig = {
 };
 
 export const SITES: Record<string, SiteConfig> = {
-    "city-1": {
+    "madrid": {
         ..._hubConfig,
-        slug: "city-1",
-        city: "City 1",
-        region: "Region 1"
+        slug: "madrid",
+        city: "Madrid",
+        postalCode: "28001",
+        region: "Comunidad de Madrid",
+        department: "Madrid",
+        coordinates: { lat: 40.4168, lng: -3.7038 }
     },
-    "city-2": {
+    "barcelona": {
         ..._hubConfig,
-        slug: "city-2",
-        city: "City 2",
-        region: "Region 1"
+        slug: "barcelona",
+        city: "Barcelona",
+        postalCode: "08001",
+        region: "Cataluña",
+        department: "Barcelona",
+        coordinates: { lat: 41.3851, lng: 2.1734 }
     },
-    "city-3": {
+    "valencia": {
         ..._hubConfig,
-        slug: "city-3",
-        city: "City 3",
-        region: "Region 1"
+        slug: "valencia",
+        city: "Valencia",
+        postalCode: "46001",
+        region: "Comunidad Valenciana",
+        department: "Valencia",
+        coordinates: { lat: 39.4699, lng: -0.3763 }
     },
-    "city-4": {
+    "sevilla": {
         ..._hubConfig,
-        slug: "city-4",
-        city: "City 4",
-        region: "Region 1"
+        slug: "sevilla",
+        city: "Sevilla",
+        postalCode: "41001",
+        region: "Andalucía",
+        department: "Sevilla",
+        coordinates: { lat: 37.3891, lng: -5.9845 }
     },
-    "city-5": {
+    "zaragoza": {
         ..._hubConfig,
-        slug: "city-5",
-        city: "City 5",
-        region: "Region 1"
+        slug: "zaragoza",
+        city: "Zaragoza",
+        postalCode: "50001",
+        region: "Aragón",
+        department: "Zaragoza",
+        coordinates: { lat: 41.6488, lng: -0.8891 }
     },
-    "city-6": {
+    "m-laga": {
         ..._hubConfig,
-        slug: "city-6",
-        city: "City 6",
-        region: "Region 1"
+        slug: "m-laga",
+        city: "Málaga",
+        postalCode: "29001",
+        region: "Andalucía",
+        department: "Málaga",
+        coordinates: { lat: 36.7213, lng: -4.4216 }
     },
-    "city-7": {
+    "murcia": {
         ..._hubConfig,
-        slug: "city-7",
-        city: "City 7",
-        region: "Region 1"
+        slug: "murcia",
+        city: "Murcia",
+        postalCode: "30001",
+        region: "Región de Murcia",
+        department: "Murcia",
+        coordinates: { lat: 37.9922, lng: -1.1307 }
     },
-    "city-8": {
+    "palma": {
         ..._hubConfig,
-        slug: "city-8",
-        city: "City 8",
-        region: "Region 1"
+        slug: "palma",
+        city: "Palma",
+        postalCode: "07001",
+        region: "Islas Baleares",
+        department: "Baleares",
+        coordinates: { lat: 39.5696, lng: 2.6502 }
     },
-    "city-9": {
+    "las-palmas": {
         ..._hubConfig,
-        slug: "city-9",
-        city: "City 9",
-        region: "Region 1"
+        slug: "las-palmas",
+        city: "Las Palmas",
+        postalCode: "35001",
+        region: "Canarias",
+        department: "Las Palmas",
+        coordinates: { lat: 28.1235, lng: -15.4363 }
     },
-    "city-10": {
+    "bilbao": {
         ..._hubConfig,
-        slug: "city-10",
-        city: "City 10",
-        region: "Region 1"
+        slug: "bilbao",
+        city: "Bilbao",
+        postalCode: "48001",
+        region: "País Vasco",
+        department: "Vizcaya",
+        coordinates: { lat: 43.263, lng: -2.935 }
     },
-    "city-11": {
+    "alicante": {
         ..._hubConfig,
-        slug: "city-11",
-        city: "City 11",
-        region: "Region 1"
+        slug: "alicante",
+        city: "Alicante",
+        postalCode: "03001",
+        region: "Comunidad Valenciana",
+        department: "Alicante",
+        coordinates: { lat: 38.3452, lng: -0.481 }
     },
-    "city-12": {
+    "c-rdoba": {
         ..._hubConfig,
-        slug: "city-12",
-        city: "City 12",
-        region: "Region 1"
+        slug: "c-rdoba",
+        city: "Córdoba",
+        postalCode: "14001",
+        region: "Andalucía",
+        department: "Córdoba",
+        coordinates: { lat: 37.8882, lng: -4.7794 }
     },
-    "city-13": {
+    "valladolid": {
         ..._hubConfig,
-        slug: "city-13",
-        city: "City 13",
-        region: "Region 1"
+        slug: "valladolid",
+        city: "Valladolid",
+        postalCode: "47001",
+        region: "Castilla y León",
+        department: "Valladolid",
+        coordinates: { lat: 41.6523, lng: -4.7245 }
     },
-    "city-14": {
+    "vigo": {
         ..._hubConfig,
-        slug: "city-14",
-        city: "City 14",
-        region: "Region 1"
+        slug: "vigo",
+        city: "Vigo",
+        postalCode: "36201",
+        region: "Galicia",
+        department: "Pontevedra",
+        coordinates: { lat: 42.2406, lng: -8.7207 }
     },
-    "city-15": {
+    "gij-n": {
         ..._hubConfig,
-        slug: "city-15",
-        city: "City 15",
-        region: "Region 1"
+        slug: "gij-n",
+        city: "Gijón",
+        postalCode: "33201",
+        region: "Asturias",
+        department: "Asturias",
+        coordinates: { lat: 43.5322, lng: -5.6611 }
     },
-    "city-16": {
+    "l-hospitalet": {
         ..._hubConfig,
-        slug: "city-16",
-        city: "City 16",
-        region: "Region 1"
+        slug: "l-hospitalet",
+        city: "L'Hospitalet",
+        postalCode: "08901",
+        region: "Cataluña",
+        department: "Barcelona",
+        coordinates: { lat: 41.3597, lng: 2.0998 }
     },
-    "city-17": {
+    "vitoria": {
         ..._hubConfig,
-        slug: "city-17",
-        city: "City 17",
-        region: "Region 1"
+        slug: "vitoria",
+        city: "Vitoria",
+        postalCode: "01001",
+        region: "País Vasco",
+        department: "Álava",
+        coordinates: { lat: 42.8467, lng: -2.6716 }
     },
-    "city-18": {
+    "a-coru-a": {
         ..._hubConfig,
-        slug: "city-18",
-        city: "City 18",
-        region: "Region 1"
+        slug: "a-coru-a",
+        city: "A Coruña",
+        postalCode: "15001",
+        region: "Galicia",
+        department: "A Coruña",
+        coordinates: { lat: 43.3623, lng: -8.4115 }
     },
-    "city-19": {
+    "elche": {
         ..._hubConfig,
-        slug: "city-19",
-        city: "City 19",
-        region: "Region 1"
+        slug: "elche",
+        city: "Elche",
+        postalCode: "03201",
+        region: "Comunidad Valenciana",
+        department: "Alicante",
+        coordinates: { lat: 38.2669, lng: -0.6984 }
     },
-    "city-20": {
+    "granada": {
         ..._hubConfig,
-        slug: "city-20",
-        city: "City 20",
-        region: "Region 1"
+        slug: "granada",
+        city: "Granada",
+        postalCode: "18001",
+        region: "Andalucía",
+        department: "Granada",
+        coordinates: { lat: 37.1773, lng: -3.5986 }
     },
     "expertoaerotermia.es": _hubConfig,
     "www.expertoaerotermia.es": _hubConfig,
