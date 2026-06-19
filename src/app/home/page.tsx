@@ -58,14 +58,14 @@ export default function HomePage() {
                         <div className="lg:col-span-7 flex flex-col gap-8 text-center lg:text-left">
                             <div>
                                 {/* Trust Badge */}
-                                <div className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-bold text-rose-700 mb-6">
+                                <div className="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-bold text-sky-700 mb-6">
                                     <CheckCircle size={16} className="mr-2" />
                                     Réseau National certifié RGE QualiPAC
                                 </div>
 
                                 {/* H1 */}
                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                                    Passez à la <span className="text-rose-600">Pompe à Chaleur</span> et réduisez vos factures.
+                                    Passez à la <span className="text-sky-600">Pompe à Chaleur</span> et réduisez vos factures.
                                 </h1>
 
                                 {/* Subtitle */}
@@ -76,8 +76,8 @@ export default function HomePage() {
 
                             {/* LEAD FORM */}
                             <div className="w-full max-w-xl mx-auto lg:mx-0 relative z-30 text-left">
-                                <div id="simulateur" className="bg-white rounded-2xl shadow-xl shadow-rose-950/10 overflow-hidden border border-slate-200">
-                                    <div className="p-1 bg-gradient-to-r from-rose-600 to-rose-700"></div>
+                                <div id="simulateur" className="bg-white rounded-2xl shadow-xl shadow-sky-950/10 overflow-hidden border border-slate-200">
+                                    <div className="p-1 bg-gradient-to-r from-sky-600 to-sky-700"></div>
                                     <div className="p-6 md:p-8">
                                         <div className="mb-6">
                                             <h3 className="text-lg font-bold text-slate-900">Simuler mes subventions &amp; Économies de Chauffage</h3>
@@ -97,7 +97,7 @@ export default function HomePage() {
                         {/* Right Column: Hero Image & Trust Badges */}
                         <div className="lg:col-span-5 flex flex-col justify-center">
                             <div className="relative h-[480px] w-full mb-8">
-                                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-rose-950/10 border border-slate-100 bg-white p-2">
+                                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-sky-950/10 border border-slate-100 bg-white p-2">
                                     <div className="relative w-full h-full rounded-xl overflow-hidden">
                                         <Image
                                             src={hub.heroImage}
@@ -110,8 +110,8 @@ export default function HomePage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
                                         <div className="absolute bottom-8 left-8 right-8 z-20">
                                             <div className="bg-white/95 backdrop-blur rounded-xl p-5 shadow-xl border border-white/50 flex items-center gap-4 cursor-default">
-                                                <div className="bg-rose-100 p-3 rounded-full shrink-0">
-                                                    <ShieldCheck className="w-6 h-6 text-rose-600" />
+                                                <div className="bg-sky-100 p-3 rounded-full shrink-0">
+                                                    <ShieldCheck className="w-6 h-6 text-sky-600" />
                                                 </div>
                                                 <div>
                                                     <div className="font-bold text-lg text-slate-900">Garantie Performance</div>
@@ -126,11 +126,11 @@ export default function HomePage() {
                             {/* Trust Badges */}
                             <div className="flex flex-wrap items-center gap-4 justify-center px-4">
                                 <div className="flex items-center gap-2 bg-white border border-slate-200 px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition-all hover:scale-105 duration-300">
-                                    <Award size={24} className="text-rose-600 fill-rose-100" />
+                                    <Award size={24} className="text-sky-600 fill-sky-100" />
                                     <span className="font-bold text-slate-900 text-base">QualiPAC RGE</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white border border-slate-200 px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition-all hover:scale-105 duration-300">
-                                    <Award size={24} className="text-rose-600 fill-rose-100" />
+                                    <Award size={24} className="text-sky-600 fill-sky-100" />
                                     <span className="font-bold text-slate-900 text-base">Garantie Décennale</span>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
             <section className="py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 bg-rose-100 text-rose-700 rounded-full px-4 py-2 text-sm font-bold mb-4">
+                        <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 rounded-full px-4 py-2 text-sm font-bold mb-4">
                             <TrendingDown size={18} />
                             Économies &amp; Performance
                         </div>
@@ -190,12 +190,12 @@ export default function HomePage() {
 
                                 {/* Solar Column */}
                                 <div className="p-8 bg-green-50 relative rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl">
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-rose-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg z-10">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-sky-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg z-10">
                                         RECOMMANDÉ
                                     </div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                                            <Zap className="text-rose-600" size={24} />
+                                            <Zap className="text-sky-600" size={24} />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg text-green-900">Pompe à Chaleur</h3>
@@ -271,7 +271,7 @@ export default function HomePage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="#simulateur"
-                            className="flex items-center justify-center gap-3 rounded-2xl bg-rose-600 px-8 py-4 text-lg font-bold text-white shadow-xl hover:bg-rose-700 transition"
+                            className="flex items-center justify-center gap-3 rounded-2xl bg-sky-600 px-8 py-4 text-lg font-bold text-white shadow-xl hover:bg-sky-700 transition"
                         >
                             <Zap size={24} />
                             Lancer ma simulation PAC

@@ -15,7 +15,7 @@ export default function InstallationSteps() {
                 <div className="grid md:grid-cols-4 gap-6">
                     {steps.map((s, i) => (
                         <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                            <div className="text-4xl font-black text-rose-100 mb-2">0{i + 1}</div>
+                            <div className="text-4xl font-black text-sky-100 mb-2">0{i + 1}</div>
                             <h3 className="font-bold text-lg mb-2">{s.title}</h3>
                             <p className="text-sm text-slate-600">{s.desc}</p>
                         </div>

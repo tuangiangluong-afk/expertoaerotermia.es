@@ -9,10 +9,10 @@
             "has": [
                 {
                     "type": "host",
-                    "value": "www.expertpompeachaleur.com"
+                    "value": "www.expertoaerotermia.es"
                 }
             ],
-            "destination": "https://expertpompeachaleur.com/:path",
+            "destination": "https://expertoaerotermia.es/:path",
             "statusCode": 301
         }
     ],

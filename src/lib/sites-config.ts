@@ -60,14 +60,14 @@ const TEMPLATE_FEATURES = [
 
 const _hubConfig: SiteConfig = {
     slug: "home",
-    domain: "expertpompeachaleur.com",
+    domain: 'expertoaerotermia.es',
     city: "France",
     postalCode: "",
     department: "",
     region: "National",
-    name: "Expert Pompe à Chaleur",
+    name: 'Experto Aerotermia',
     phoneNumber: "01 84 80 00 00",
-    email: "contact@expertpompeachaleur.com",
+    email: 'contacto@expertoaerotermia.es',
     targetType: 'MIXED',
     priceRange: 'STANDARD',
     theme: 'premium',

@@ -73,23 +73,23 @@ export default function TestimonialsSection({
                         </div>
 
                         {/* Animated Map Pins */}
-                        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 bg-rose-600 text-white p-2 rounded-full shadow-lg animate-bounce">
+                        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 bg-sky-600 text-white p-2 rounded-full shadow-lg animate-bounce">
                             <MapPin className="w-5 h-5" />
                         </div>
                         <div
-                            className="absolute top-1/2 left-1/3 bg-rose-600 text-white p-2 rounded-full shadow-lg animate-bounce"
+                            className="absolute top-1/2 left-1/3 bg-sky-600 text-white p-2 rounded-full shadow-lg animate-bounce"
                             style={{ animationDelay: "0.5s" }}
                         >
                             <MapPin className="w-5 h-5" />
                         </div>
                         <div
-                            className="absolute bottom-1/3 right-1/3 bg-rose-600 text-white p-2 rounded-full shadow-lg animate-bounce"
+                            className="absolute bottom-1/3 right-1/3 bg-sky-600 text-white p-2 rounded-full shadow-lg animate-bounce"
                             style={{ animationDelay: "0.2s" }}
                         >
                             <MapPin className="w-5 h-5" />
                         </div>
                         <div
-                            className="absolute top-2/3 left-1/4 bg-rose-600 text-white p-2 rounded-full shadow-lg animate-bounce"
+                            className="absolute top-2/3 left-1/4 bg-sky-600 text-white p-2 rounded-full shadow-lg animate-bounce"
                             style={{ animationDelay: "0.7s" }}
                         >
                             <MapPin className="w-5 h-5" />
@@ -127,7 +127,7 @@ export default function TestimonialsSection({
                                 &quot;{testimonial.quote}&quot;
                             </p>
                             <div className="flex items-center gap-3">
-                                <div className={`h-10 w-10 rounded-full flex items-center justify-center text-white font-bold ${index === 0 ? "bg-slate-600" : "bg-rose-600/20 text-rose-400"
+                                <div className={`h-10 w-10 rounded-full flex items-center justify-center text-white font-bold ${index === 0 ? "bg-slate-600" : "bg-sky-600/20 text-sky-400"
                                     }`}>
                                     {testimonial.initials}
                                 </div>

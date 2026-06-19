@@ -54,7 +54,7 @@ export default function FloatingCTA({
             {/* Main CTA button */}
             <button
                 onClick={scrollToForm}
-                className="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full shadow-lg shadow-rose-600/30 flex items-center gap-2 transform hover:scale-105 transition-all"
+                className="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full shadow-lg shadow-sky-600/30 flex items-center gap-2 transform hover:scale-105 transition-all"
             >
                 <FileText className="w-5 h-5" />
                 <span>{label}</span>

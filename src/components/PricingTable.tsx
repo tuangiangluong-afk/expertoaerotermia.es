@@ -19,19 +19,19 @@ export default function PricingTable() {
                         </thead>
                         <tbody className="text-slate-600">
                             <tr className="border-b hover:bg-slate-50">
-                                <td className="p-4 font-bold text-rose-950">PAC Air-Air (Climatisation Réversible)</td>
+                                <td className="p-4 font-bold text-sky-950">PAC Air-Air (Climatisation Réversible)</td>
                                 <td className="p-4">3 000€ - 6 000€</td>
                                 <td className="p-4">1 500€ - 3 000€</td>
                                 <td className="p-4 font-bold text-green-600">Dès 3 500€ (Après aides CEE)</td>
                             </tr>
                             <tr className="border-b hover:bg-slate-50">
-                                <td className="p-4 font-bold text-rose-950">PAC Air-Eau (Chauffage &amp; Eau Chaude)</td>
+                                <td className="p-4 font-bold text-sky-950">PAC Air-Eau (Chauffage &amp; Eau Chaude)</td>
                                 <td className="p-4">7 000€ - 12 000€</td>
                                 <td className="p-4">3 000€ - 5 000€</td>
                                 <td className="p-4 font-bold text-green-600">Dès 2 000€ (Après MaPrimeRénov&apos;)</td>
                             </tr>
                             <tr className="border-b hover:bg-slate-50">
-                                <td className="p-4 font-bold text-rose-950">PAC Géothermique (Haute Performance)</td>
+                                <td className="p-4 font-bold text-sky-950">PAC Géothermique (Haute Performance)</td>
                                 <td className="p-4">12 000€ - 18 000€</td>
                                 <td className="p-4">5 000€ - 8 000€</td>
                                 <td className="p-4 font-bold text-green-600">Dès 9 000€ (Après aides d&apos;État)</td>

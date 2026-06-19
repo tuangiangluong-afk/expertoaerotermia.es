@@ -62,7 +62,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
             >
                 <span className="font-bold text-slate-900 pr-8">{question}</span>
                 {isOpen ? (
-                    <Minus className="w-5 h-5 text-rose-600 shrink-0" />
+                    <Minus className="w-5 h-5 text-sky-600 shrink-0" />
                 ) : (
                     <Plus className="w-5 h-5 text-slate-400 shrink-0" />
                 )}

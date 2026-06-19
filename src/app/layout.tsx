@@ -15,69 +15,70 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
-  const canonicalDomain = headersList.get("x-irve-canonical-domain") || "www.expertpompeachaleur.com";
+  const canonicalDomain = headersList.get("x-irve-canonical-domain") || "www.expertoaerotermia.es";
   const path = headersList.get("x-irve-path") || "";
   const baseUrl = `https://${canonicalDomain}`;
 
   return {
-  title: {
-    template: `%s | Expert Pompe à Chaleur ${getCurrentYearSEO()}`,
-    default: `Expert Pompe à Chaleur - Installation & Aides ${getCurrentYearSEO()}`,
-  },
-  description: "Installation de pompes à chaleur air-eau et air-air. Réseau d'installateurs qualifiés RGE QualiPAC. Simulateur d'aides MaPrimeRénov' gratuit en 24h.",
-  metadataBase: new URL(baseUrl),
-  alternates: {
-    canonical: `${baseUrl}${path}`,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    title: {
+      template: "%s | Experto Aerotermia 2026",
+      default: "Experto Aerotermia - Instalación de Bombas de Calor 2026",
+    },
+    description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores certificados y solicita las ayudas NextGen.",
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `${baseUrl}${path}`,
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    title: "Expert Pompe à Chaleur - Installation & Remplacement Chauffage",
-    description: "Installation de pompes à chaleur air-eau et air-air partout en France. Simulateur d'éligibilité MaPrimeRénov' et devis gratuits sous 24h. Installateurs RGE QualiPAC.",
-    siteName: "Expert Pompe à Chaleur",
-    locale: "fr_FR",
-    type: "website",
-    url: `${baseUrl}${path}`,
-    images: [
-      {
-        url: `${baseUrl}/images/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "Expert Pompe à Chaleur - Installation de pompes à chaleur en France",
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Expert Pompe à Chaleur - Installation & Remplacement Chauffage",
-    description: "Installation de pompes à chaleur air-eau et air-air. Simulateur d'éligibilité MaPrimeRénov' gratuit.",
-    images: [`${baseUrl}/images/og-image.png`],
-  },
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/favicon.png",
-    apple: "/icon.png",
-    other: [
-      {
-        rel: "icon",
-        url: "/favicon.ico",
-      }
-    ]
-  },
+    },
+    openGraph: {
+      title: "Experto Aerotermia - Calefacción Eficiente España",
+      description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores autorizados y solicita las ayudas Next Generation.",
+      siteName: "Experto Aerotermia",
+      locale: "es_ES",
+      type: "website",
+      url: `${baseUrl}${path}`,
+      images: [
+        {
+          url: `${baseUrl}/images/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: "Experto Aerotermia - Instalación de aerotermia en España",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Experto Aerotermia - Calefacción Eficiente España",
+      description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores autorizados y solicita las ayudas Next Generation.",
+      images: [`${baseUrl}/images/og-image.png`],
+    },
+    icons: {
+      icon: "/icon.png",
+      shortcut: "/favicon.png",
+      apple: "/icon.png",
+      other: [
+        {
+          rel: "icon",
+          url: "/favicon.ico",
+        }
+      ]
+    },
   };
-}export const viewport: Viewport = {
-  themeColor: "#be123c",
-};
+}
 
+export const viewport: Viewport = {
+  themeColor: "#0284c7",
+};
 
 export default function RootLayout({
   children,
@@ -85,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <head>
         {/* Google Tag Manager */}
         <script
