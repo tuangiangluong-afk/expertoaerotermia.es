@@ -103,7 +103,7 @@ export default function TestimonialsSection({
                     <div className="flex items-end gap-4 mb-4">
                         <span className="text-6xl font-black text-white">{rating}</span>
                         <div className="flex flex-col pb-2">
-                            <div className="flex text-yellow-400 mb-1">
+                            <div className="flex text-sky-400 mb-1">
                                 {[...Array(5)].map((_, i) => (
                                     <Star
                                         key={i}

@@ -62,7 +62,7 @@ const REVIEW_POOL = [
     }
 ];
 
-export default function Reviews({ site, themeColor = 'rose' }: ReviewsProps) {
+export default function Reviews({ site, themeColor = 'blue' }: ReviewsProps) {
     const city = site.city;
     const isFrance = city.toLowerCase() === "france";
     const prep = isFrance ? "en" : "à";
@@ -112,7 +112,7 @@ export default function Reviews({ site, themeColor = 'rose' }: ReviewsProps) {
     const themeStyles = {
         blue: "text-blue-600",
         emerald: "text-emerald-600",
-        amber: "text-amber-600",
+        amber: "text-cyan-600",
         purple: "text-purple-600",
         rose: "text-sky-600"
     };
@@ -137,7 +137,7 @@ export default function Reviews({ site, themeColor = 'rose' }: ReviewsProps) {
                     <div className="flex items-center gap-3 bg-neutral-50 px-5 py-3 rounded-xl border border-neutral-200 shadow-sm">
                         <span className="text-3xl font-bold text-neutral-900">4.9</span>
                         <div className="flex flex-col">
-                            <div className="flex text-yellow-400 gap-0.5">
+                            <div className="flex text-sky-400 gap-0.5">
                                 {[1, 2, 3, 4, 5].map(i => (
                                     <Star key={i} fill="currentColor" size={16} />
                                 ))}
@@ -166,9 +166,9 @@ export default function Reviews({ site, themeColor = 'rose' }: ReviewsProps) {
                         >
                             {/* Stars & Source */}
                             <div className="flex items-center justify-between mb-3">
-                                <div className="flex text-yellow-400 gap-0.5">
+                                <div className="flex text-sky-400 gap-0.5">
                                     {[...Array(5)].map((_, j) => (
-                                        <Star key={j} size={14} fill={j < Math.floor(review.rating) ? "currentColor" : "none"} className={j < Math.floor(review.rating) ? "text-yellow-400" : "text-gray-300"} />
+                                        <Star key={j} size={14} fill={j < Math.floor(review.rating) ? "currentColor" : "none"} className={j < Math.floor(review.rating) ? "text-sky-400" : "text-gray-300"} />
                                     ))}
                                 </div>
                                 <span className="text-xs text-neutral-400">{review.source}</span>

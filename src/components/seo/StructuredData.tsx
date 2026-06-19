@@ -4,29 +4,26 @@ export default function StructuredData() {
     const schema = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Expert Pompe à Chaleur",
-        "url": "https://www.expertpompeachaleur.com",
-        "logo": "https://www.expertpompeachaleur.com/logo.png",
-        "description": "Réseau national d'installateurs de pompes à chaleur pour particuliers et professionnels. Installateurs certifiés RGE QualiPAC.",
-        "sameAs": [
-            "https://www.facebook.com/expertpompeachaleur",
-            "https://www.instagram.com/expertpompeachaleur"
-        ],
+        "name": "Experto Aerotermia",
+        "url": "https://www.expertoaerotermia.es",
+        "logo": "https://www.expertoaerotermia.es/logo.png",
+        "description": "Red nacional de instaladores profesionales de aerotermia y bombas de calor para particulares y empresas en España.",
+        "sameAs": [],
         "foundingDate": "2020",
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "FR"
+            "addressCountry": "ES"
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+33 1 84 80 00 00",
+            "telephone": "910 00 00 00",
             "contactType": "customer service",
-            "areaServed": "FR",
-            "availableLanguage": "French"
+            "areaServed": "ES",
+            "availableLanguage": "Spanish"
         },
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://www.expertpompeachaleur.com/ville/{search_term_string}",
+            "target": "https://www.expertoaerotermia.es/ville/{search_term_string}",
             "query-input": "required name=search_term_string"
         }
     };
@@ -34,11 +31,11 @@ export default function StructuredData() {
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://www.expertpompeachaleur.com",
-        "name": "expertpompeachaleur",
+        "url": "https://www.expertoaerotermia.es",
+        "name": "expertoaerotermia",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://www.expertpompeachaleur.com/ville/{search_term_string}",
+            "target": "https://www.expertoaerotermia.es/ville/{search_term_string}",
             "query-input": "required name=search_term_string"
         }
     };
@@ -46,9 +43,9 @@ export default function StructuredData() {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "Installation et Dépannage",
-        "provider": { "@type": "Organization", "name": "expertpompeachaleur" },
-        "areaServed": { "@type": "Country", "name": "France" }
+        "serviceType": "Instalación de Aerotermia",
+        "provider": { "@type": "Organization", "name": "expertoaerotermia" },
+        "areaServed": { "@type": "Country", "name": "España" }
     };
 
     return (

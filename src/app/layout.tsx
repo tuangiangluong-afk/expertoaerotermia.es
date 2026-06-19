@@ -8,10 +8,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-import { getCurrentYearSEO } from "@/lib/date";
 import StructuredData from "@/components/seo/StructuredData";
 import AttributionTracker from "@/components/AttributionTracker";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
@@ -21,10 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: {
-      template: "%s | Experto Aerotermia 2026",
-      default: "Experto Aerotermia - Instalación de Bombas de Calor 2026",
+      template: `%s | Experto Aerotermia`,
+      default: "Experto Aerotermia - Instalación de Aerotermia España",
     },
-    description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores certificados y solicita las ayudas NextGen.",
+    description: "Compara gratis hasta 3 presupuestos de instaladores acreditados de aerotermia y suelo radiante en España. Ahorra hasta un 70% en calefacción.",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: `${baseUrl}${path}`,
@@ -41,8 +39,8 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Experto Aerotermia - Calefacción Eficiente España",
-      description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores autorizados y solicita las ayudas Next Generation.",
+      title: "Experto Aerotermia - Instalación de Aerotermia España",
+      description: "Compara gratis hasta 3 presupuestos de instaladores acreditados de aerotermia y suelo radiante en España. Ahorra hasta un 70% en calefacción.",
       siteName: "Experto Aerotermia",
       locale: "es_ES",
       type: "website",
@@ -52,14 +50,14 @@ export async function generateMetadata(): Promise<Metadata> {
           url: `${baseUrl}/images/og-image.png`,
           width: 1200,
           height: 630,
-          alt: "Experto Aerotermia - Instalación de aerotermia en España",
+          alt: "Experto Aerotermia - Instalación de Aerotermia España",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Experto Aerotermia - Calefacción Eficiente España",
-      description: "Instalación de bombas de calor aerotérmicas en España. Compara presupuestos de instaladores autorizados y solicita las ayudas Next Generation.",
+      title: "Experto Aerotermia - Instalación de Aerotermia España",
+      description: "Compara gratis hasta 3 presupuestos de instaladores acreditados de aerotermia y suelo radiante en España. Ahorra hasta un 70% en calefacción.",
       images: [`${baseUrl}/images/og-image.png`],
     },
     icons: {
@@ -77,7 +75,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0284c7",
+  themeColor: "#06b6d4",
 };
 
 export default function RootLayout({
@@ -100,12 +98,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body
-        className={`${inter.variable} font-sans antialiased bg-neutral-900 text-neutral-50`}
-      >
-        <StructuredData />
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-20JN53SLCP" />
-        <AttributionTracker />
+      <body className={`${inter.variable} antialiased bg-white text-slate-900`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -113,9 +106,11 @@ export default function RootLayout({
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+          />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <AttributionTracker />
+        <StructuredData />
         {children}
       </body>
     </html>
