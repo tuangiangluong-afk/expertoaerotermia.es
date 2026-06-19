@@ -45,7 +45,7 @@ export function getTargetAsCityConfig(slug: string): CityConfig | undefined {
         city: target.name,
         name: `${target.heroTitle} ${target.name}`,
         domain: `${target.slug}.expertoaerotermia.es`, // rewrite target
-        heroImage: target.heroImage || "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2672&auto=format&fit=crop",
+        heroImage: target.heroImage || "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2672&auto=format&fit=crop",
         postalCode: target.zip,
         department: "ES",
         region: "España",
