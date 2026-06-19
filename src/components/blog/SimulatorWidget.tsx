@@ -21,10 +21,10 @@ export default function SimulatorWidget() {
             </div>
 
             <a href="/#simulateur" className="block w-full text-center bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:shadow-sky-500/25 transition-all">
-                Comparer les devis
+                Comparar presupuestos
             </a>
             <div className="mt-4 flex justify-center items-center gap-2 text-xs text-green-600 font-medium">
-                <CheckCircle size={12} /> Gratuit & Sans engagement
+                <CheckCircle size={12} /> Gratis y sin compromiso
             </div>
         </div>
     );
