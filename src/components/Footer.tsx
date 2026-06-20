@@ -56,11 +56,11 @@ export function Footer({ config }: FooterProps) {
                                 {config.slug === 'home' ? (
                                     <>
                                         
-            <li><Link href="/ville/madrid" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-blue-500 transition"></span>Madrid</Link></li>
-            <li><Link href="/ville/barcelona" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-blue-500 transition"></span>Barcelona</Link></li>
-            <li><Link href="/ville/valencia" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-blue-500 transition"></span>Valencia</Link></li>
-            <li><Link href="/ville/sevilla" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-blue-500 transition"></span>Sevilla</Link></li>
-            <li><Link href="/ville/malaga" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-blue-500 transition"></span>Málaga</Link></li>
+            <li><Link href="/ville/madrid" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-amber-500 transition"></span>Madrid</Link></li>
+            <li><Link href="/ville/barcelona" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-amber-500 transition"></span>Barcelona</Link></li>
+            <li><Link href="/ville/valencia" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-amber-500 transition"></span>Valencia</Link></li>
+            <li><Link href="/ville/sevilla" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-amber-500 transition"></span>Sevilla</Link></li>
+            <li><Link href="/ville/malaga" className="text-neutral-400 hover:text-white transition flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-amber-500 transition"></span>Málaga</Link></li>
         
                                     </>
                                 ) : (
