@@ -59,7 +59,7 @@ export default function HubContactPage() {
                                 <MapPin size={28} />
                             </div>
                             <h3 className="font-bold text-slate-900 text-lg mb-2">Siège Social</h3>
-                            <p className="text-slate-500 text-sm mb-4">Paris, France</p>
+                            <p className="text-slate-500 text-sm mb-4">Madrid, España</p>
                             <p className="font-bold text-slate-900">Expert Pompe à Chaleur</p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ export default function HubContactPage() {
                         {/* Form */}
                         <div id="form" className="lg:col-span-3 bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-slate-100">
                             <div className="mb-8">
-                                <h2 className="text-2xl font-bold text-slate-900">Envoyer un message</h2>
+                                <h2 className="text-2xl font-bold text-slate-900">Enviar un mensaje</h2>
                                 <p className="text-slate-500">Remplissez le formulaire ci-dessous pour lancer votre étude thermique.</p>
                             </div>
                             <ContactForm domain="expertpompeachaleur.com" city="Hub National" theme={getTheme('national')} />

@@ -12,7 +12,7 @@ export default function AdminSitesPage() {
                 <div className="max-w-md mx-auto">
                     <h2 className="text-lg font-semibold text-slate-900 mb-2">Module Sites en construction</h2>
                     <p className="text-slate-500 mb-6">
-                        Ici, vous pourrez gérer la configuration de vos 50+ sites (titres, images, téléphone).
+                        Aquí puede gestionar la configuración de sus más de 50 sitios (títulos, imágenes, teléfono).
                         Actuellement, la configuration est gérée via le code (`sites-config.ts`).
                     </p>
                     <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">

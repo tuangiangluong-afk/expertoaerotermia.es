@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Conditions Générales de Vente - Expert Pompe à Chaleur",
-    description: "Consultez les CGV du réseau Expert Pompe à Chaleur : mise en relation avec des installateurs certifiés RGE QualiPAC, presupuesto gratuitos.",
+    description: "Consultez les CGV du réseau Expert Pompe à Chaleur : mise en relation avec des installateurs certifiés RGE QualiPAC, Presupuesto gratuitos.",
 };
 
 export default function CGV() {
@@ -47,10 +47,10 @@ export default function CGV() {
                     </div>
 
                     <div className="mb-8 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-                        <h2 className="mb-4 text-2xl font-bold text-sky-900">2. Demandes de Devis et Tarifs</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-sky-900">2. Solicitudes de Presupuesto y Tarifas</h2>
                         <ul className="list-disc pl-5 space-y-2">
                             <li><strong>Demande de mise en relation :</strong> L'utilisateur remplit un formulaire précisant son besoin (puissance souhaitée, consommation électrique moyenne, système de chauffage actuel, simulateur d'aides).</li>
-                            <li><strong>presupuesto gratuito :</strong> Le service de mise en relation et l'établissement des devis par nos partenaires sont gratuits pour l'utilisateur.</li>
+                            <li><strong>Presupuesto gratuito :</strong> El servicio de puesta en contacto y la elaboración de presupuestos por nuestros socios son gratuitos para el usuario.</li>
                             <li><strong>Tarification des travaux :</strong> Le prix final de l'installation est déterminé par l'installateur RGE QualiPAC partenaire après visite technique. Les estimations de rentabilité fournies sur le site sont indicatives.</li>
                         </ul>
                     </div>

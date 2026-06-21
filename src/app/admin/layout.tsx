@@ -52,7 +52,7 @@ export default async function AdminLayout({
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 mt-6 px-2">Business</div>
                     <Link href="/admin/leads" className="flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition">
                         <Users size={18} />
-                        Leads (Devis)
+                        Leads (Presupuestos)
                     </Link>
                     <Link href="/admin/partners" className="flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition">
                         <Users size={18} />

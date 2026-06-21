@@ -34,10 +34,10 @@ export async function POST(req: Request) {
             html: `
                 <h1>Nouveau message depuis ${domain}</h1>
                 <p><strong>Ville :</strong> ${city}</p>
-                <p><strong>Code Postal :</strong> ${postalCode || 'N/A'}</p>
-                <p><strong>Nom :</strong> ${name}</p>
+                <p><strong>Código Postal :</strong> ${postalCode || 'N/A'}</p>
+                <p><strong>Nombre :</strong> ${name}</p>
                 <p><strong>Email :</strong> ${email}</p>
-                <p><strong>Téléphone :</strong> ${phone || 'N/A'}</p>
+                <p><strong>Teléfono :</strong> ${phone || 'N/A'}</p>
                 <p><strong>Sujet :</strong> ${subject}</p>
                 <hr />
                 <h3>Message :</h3>

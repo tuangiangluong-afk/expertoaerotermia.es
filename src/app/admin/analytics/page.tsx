@@ -180,7 +180,7 @@ export default function AdminAnalyticsPage() {
                                 </div>
                                 <div>
                                     <div className="flex justify-between text-sm mb-1">
-                                        <span className="font-medium text-slate-700">Contactés / Devis envoyé</span>
+                                        <span className="font-medium text-slate-700">Contactados / Presupuesto enviado</span>
                                         <span className="text-slate-900 font-bold">{stats.contacted}</span>
                                     </div>
                                     <div className="w-full bg-slate-100 rounded-full h-2">
@@ -211,7 +211,7 @@ export default function AdminAnalyticsPage() {
                         <div className="mt-8 p-4 bg-slate-50 rounded-lg flex gap-3">
                             <Activity className="text-blue-600 shrink-0" />
                             <div className="text-sm text-slate-600">
-                                <span className="font-bold text-slate-900">Conseil :</span> Le taux de conversion est bas sur les leads "Entreprise". Pensez à relancer les devis de plus de 7 jours.
+                                <span className="font-bold text-slate-900">Consejo :</span> La tasa de conversión es baja en los leads "Empresa". Considere hacer seguimiento de los presupuestos de más de 7 días.
                             </div>
                         </div>
                     </div>

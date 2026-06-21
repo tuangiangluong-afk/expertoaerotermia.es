@@ -40,7 +40,7 @@ const timelineSteps: TimelineStep[] = [
     },
     {
         icon: <FileText className="w-5 h-5" />,
-        title: "Devis & Dossier d'aides",
+        title: "Presupuesto y Ayudas",
         timing: "Estimation personnalisée",
         description: "Vous recevrez une proposition commerciale détaillée avec calcul des aides MaPrimeRénov' et CEE déduites.",
         active: false,

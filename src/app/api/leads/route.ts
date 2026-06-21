@@ -48,7 +48,7 @@ export async function POST(request: Request) {
             console.log("📡 [ViteUnDevis] Forwarding lead...");
             const nameParts = (name || '').trim().split(/\s+/);
             const prenom = nameParts[0] || 'Client';
-            const nom = nameParts.slice(1).join(' ') || 'Inconnu';
+            const nom = nameParts.slice(1).join(' ') || 'Desconocido';
             
             const vudPayload = {
                 nom, prenom, email, tel: phone, cp: postalCode, ville: city,
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
             console.log("📡 [Habitissimo] Forwarding lead...");
             const habitissimoPayload = {
                 contact: { name, email, phone, zip_code: postalCode, city: city },
-                project: { category: currentNiche, description: `Demande de devis générée depuis ${domain}. Projet: ${projectType}`, timeline: "Asap" }
+                project: { category: currentNiche, description: `Solicitud de presupuesto generada desde ${domain}. Projet: ${projectType}`, timeline: "Asap" }
             };
             try {
                 arbitrageResult = await sendLeadToHabitissimo(habitissimoPayload);
@@ -151,9 +151,9 @@ export async function POST(request: Request) {
 
                 <h2>Informations de contact</h2>
                 <ul>
-                    <li><strong>Nom :</strong> ${name}</li>
+                    <li><strong>Nombre :</strong> ${name}</li>
                     <li><strong>Email :</strong> ${email}</li>
-                    <li><strong>Téléphone :</strong> ${phone}</li>
+                    <li><strong>Teléfono :</strong> ${phone}</li>
                 </ul>
 
                 <h2>Critères de Qualification</h2>

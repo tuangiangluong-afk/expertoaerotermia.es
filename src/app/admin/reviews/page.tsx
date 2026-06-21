@@ -192,7 +192,7 @@ export default function AdminReviewsPage() {
 
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-1">
-                                    Nom Client
+                                    Nombre del Cliente
                                 </label>
                                 <input
                                     required

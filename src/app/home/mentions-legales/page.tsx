@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Mentions Légales - Expert Pompe à Chaleur",
+    title: "Aviso Legal - Expert Pompe à Chaleur",
     description: "Mentions légales, éditeur, hébergement et politique de confidentialité du réseau Expert Pompe à Chaleur.",
 };
 
@@ -28,14 +28,14 @@ export default function MentionsLegales() {
 
             <main className="container mx-auto max-w-3xl px-4 py-12 lg:py-20">
                 <h1 className="mb-8 text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl">
-                    Mentions Légales
+                    Aviso Legal
                 </h1>
 
                 <div className="prose prose-neutral prose-lg max-w-none">
                     <div className="mb-8 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
                         <h2 className="mb-4 text-2xl font-bold text-sky-900">1. Éditeur du Site</h2>
                         <p>
-                            Le site <strong>Expert Pompe à Chaleur</strong> (expertpompeachaleur.com) est édité par la société <strong>WELINK TECH</strong>.
+                            El sitio <strong>Expert Pompe à Chaleur</strong> (expertpompeachaleur.com) est édité par la société <strong>WELINK TECH</strong>.
                         </p>
                         <ul className="list-none space-y-2 pl-0">
                             <li><strong>Forme juridique :</strong> SASU</li>
@@ -55,12 +55,12 @@ export default function MentionsLegales() {
                     </div>
 
                     <div className="mb-8 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-                        <h2 className="mb-4 text-2xl font-bold text-sky-900">3. Hébergement</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-sky-900">3. Alojamiento</h2>
                         <p>
                             Le Site est hébergé par la société <strong>Vercel Inc.</strong>
                         </p>
                         <ul className="list-none space-y-2 pl-0">
-                            <li><strong>Adresse :</strong> 340 S Lemon Ave #4133 Walnut, CA 91789, USA</li>
+                            <li><strong>Dirección :</strong> 340 S Lemon Ave #4133 Walnut, CA 91789, USA</li>
                             <li><strong>Cloud Provider :</strong> Infrastructure AWS / Vercel Edge Network</li>
                         </ul>
                     </div>
@@ -75,7 +75,7 @@ export default function MentionsLegales() {
                     <div className="mb-8 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
                         <h2 className="mb-4 text-2xl font-bold text-sky-900">5. Données Personnelles (RGPD)</h2>
                         <p>
-                            Les données collectées (nom, téléphone, adresse d'installation, facture d'électricité moyenne, système de chauffage actuel) sont utilisées uniquement pour l'établissement d'études de rentabilité, de devis et la mise en relation avec nos partenaires installateurs certifiés QualiPAC.
+                            Los datos recopilados (nom, téléphone, adresse d'installation, facture d'électricité moyenne, système de chauffage actuel) se utilizan únicamente para la elaboración de estudios de viabilidad, presupuestos y para la intermediación con nuestros socios installateurs certifiés QualiPAC.
                         </p>
                         <p>
                             Vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données. Pour l&apos;exercer, contactez-nous via la page contact.

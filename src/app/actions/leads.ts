@@ -141,7 +141,7 @@ export async function assignLeadToPartners(leadId: string, partnerIds: string[])
                             </p>
         
                             <p style="font-size: 14px; color: #64748b; margin-top: 40px; border-top: 1px solid #e2e8f0; pt: 20px;">
-                                Une fois le paiement validé, vous recevrez instantanément le nom, l'email et le téléphone du client.
+                                Una vez validado el pago, recibirá instantáneamente el nombre, correo electrónico y teléfono del cliente.
                             </p>
                         </div>
                     `
@@ -228,9 +228,9 @@ export async function deliverUnlockedLead(leadId: string, partnerId: string) {
                     <div style="background-color: #ffffff; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e2e8f0; border-top: none;">
                         <h2 style="color: #1e293b; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">👤 Coordonnées Client</h2>
                         <ul style="list-style: none; padding: 0; font-size: 16px;">
-                            <li style="margin-bottom: 12px;"><strong>Nom :</strong> ${lead.name}</li>
+                            <li style="margin-bottom: 12px;"><strong>Nombre :</strong> ${lead.name}</li>
                             <li style="margin-bottom: 12px;"><strong>Email :</strong> <a href="mailto:${lead.email}" style="color: #e11d48;">${lead.email}</a></li>
-                            <li style="margin-bottom: 12px;"><strong>Téléphone :</strong> <a href="tel:${lead.phone}" style="color: #e11d48;">${lead.phone}</a></li>
+                            <li style="margin-bottom: 12px;"><strong>Teléfono :</strong> <a href="tel:${lead.phone}" style="color: #e11d48;">${lead.phone}</a></li>
                             <li style="margin-bottom: 12px;"><strong>Ville :</strong> ${lead.city} ${lead.postal_code || ''}</li>
                         </ul>
                         
@@ -245,7 +245,7 @@ export async function deliverUnlockedLead(leadId: string, partnerId: string) {
                         </ul>
 
                         <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #f1f5f9; text-align: center; color: #94a3b8; font-size: 12px;">
-                            Une facture Stripe a été envoyée à votre adresse email de paiement.
+                            Se ha enviado una factura de Stripe a su dirección de correo de pago.
                         </div>
                     </div>
                 </div>
