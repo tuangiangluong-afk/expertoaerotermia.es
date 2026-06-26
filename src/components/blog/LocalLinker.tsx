@@ -88,6 +88,7 @@ export default function LocalLinker() {
                     <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
 
                     <button
+                        aria-label="Buscar"
                         type="submit"
                         disabled={status === 'loading' || !query}
                         className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-sky-500 rounded-lg hover:bg-sky-400 disabled:opacity-50 transition text-slate-950"
