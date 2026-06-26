@@ -3,19 +3,6 @@
     "framework": "nextjs",
     "cleanUrls": true,
     "trailingSlash": false,
-    "redirects": [
-        {
-            "source": "/:path((?!api/).*)",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "www.expertoaerotermia.es"
-                }
-            ],
-            "destination": "https://expertoaerotermia.es/:path",
-            "statusCode": 301
-        }
-    ],
     "crons": [
         {
             "path": "/api/indexnow",
