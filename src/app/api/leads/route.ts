@@ -44,7 +44,7 @@ export async function POST(request: Request) {
         console.log(`⚖️ [ARBITRAGE] Pays: ${currentCountry} | Niche: ${currentNiche} | Status: ${arbitrageStatus}`);
 
         // 1. VITEUNDEVIS (FR)
-        if (true) { // Always route to ViteUnDevis
+        if (currentCountry === 'FR') { // Only route to ViteUnDevis for French leads
             console.log("📡 [ViteUnDevis] Forwarding lead...");
             const nameParts = (name || '').trim().split(/\s+/);
             const prenom = nameParts[0] || 'Client';
