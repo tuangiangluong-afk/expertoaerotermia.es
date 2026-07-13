@@ -125,6 +125,34 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         "author": {
             "@type": "Person",
             "name": post.author_name || "Expert Pompe à Chaleur"
+        },
+        "publisher": {
+
+            "@type": "Organization",
+
+            "name": "Experto Aerotermia",
+
+            "logo": {
+
+                "@type": "ImageObject",
+
+                "url": "https://www.expertoaerotermia.es/logo.png"
+
+            }
+
+        },
+
+        "mainEntityOfPage": {
+
+            "@type": "WebPage",
+
+            "@id": "https://www.expertoaerotermia.es/blog/"
+
+        },
+
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "article h2", "article p:first-of-type", ".prose > p:first-child"]
         }
     };
 
