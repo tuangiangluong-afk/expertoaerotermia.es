@@ -9,6 +9,12 @@ import { sendLeadToDAA } from '@/lib/daa';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
+        const clientIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "127.0.0.1";
+        const refererUrl = request.headers.get("referer") || "";
+        const consentText = body.consentText || "J'accepte d'être contacté(e) par téléphone par ViteUnDevis.com et ses partenaires certifiés pour la qualification de ma demande de devis et la réalisation d'une étude technique.";
+        const consentDate = body.consentDate || new Date().toISOString();
+        const consentIp = clientIp;
+        const consentUrl = body.consentUrl || refererUrl || "https://" + (body.domain || "expertoaerotermia.es");
         console.log("📥 [API/LEADS] Received body:", body);
         const {
             name, email, phone, city, postalCode, domain,
@@ -56,7 +62,11 @@ export async function POST(request: Request) {
                 tp: 1, type_bien: 2, situation: 1, delais: 2,
                 description: `Projet: ${projectType || 'N/A'}. Surface: ${monthlyBill || 'N/A'}. Generé via ${domain}`,
                 cat_id: '164',
-                site_name: domain || 'expertoaerotermia.es'
+                site_name: domain || 'expertoaerotermia.es',
+                consent_text: consentText,
+                consent_date: consentDate,
+                consent_ip: consentIp,
+                consent_url: consentUrl
             };
             try {
                 arbitrageResult = await sendLeadToViteUnDevis(vudPayload);
