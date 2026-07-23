@@ -70,7 +70,7 @@ export default function LeadForm({ city, domain, initialProjectType }: LeadFormP
                     formData.name.trim() !== "" &&
                     formData.email.includes("@") &&
                     ZIP_CODE_REGEX.test(formData.zipCode.trim()) &&
-                    PHONE_REGEX.test(formData.phone.replace(/\s/g, '') && formData.phoneConsent === true)
+                    PHONE_REGEX.test(formData.phone.replace(/\s/g, '')) && formData.phoneConsent === true
                 );
             default: return false;
         }
